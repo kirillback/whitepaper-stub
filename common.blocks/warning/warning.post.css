@@ -6,10 +6,8 @@
 	flex-direction: column;
 	justify-content: space-between;
 	&__placeholder {
-		width: 60px;
-		height: 60px;
-		background: #fff;
 		margin: auto;
+		text-align: center;
 	}
 	&__description {
 		margin-top: var(--space-l);

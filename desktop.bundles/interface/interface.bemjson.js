@@ -1,6 +1,6 @@
 module.exports = {
 	block: 'page',
-	title: 'Hello page!!',
+	title: 'Interface',
 	favicon: '/favicon.ico',
 	lang: 'ru',
 	head: [
@@ -39,7 +39,10 @@ module.exports = {
 											/* Payment */
 											{
 												block: 'payment',
-												mix: { block: 'pt-form', mods: { border: 'all' }},
+												mix: [
+													{ block: 'pt-form', mods: { border: 'all' }},
+													{ block: 'component', mods: { whitepaper: 'default' }},
+												],
 												content: [
 													{
 														elem: 'header',
@@ -88,8 +91,13 @@ module.exports = {
 																		]
 																	},
 																	{
-																		block: 'example-input',
-																		mods: { 'size': 'l' }
+																		block: 'input',
+																		mods: {
+																			theme: 'islands',
+																			size: 'l',
+																			width: 'available'
+																		},
+																		placeholder: '89218008060'
 																	}
 																]
 															},
@@ -117,8 +125,13 @@ module.exports = {
 																		]
 																	},
 																	{
-																		block: 'example-input',
-																		mods: { 'size': 'l' }
+																		block: 'input',
+																		mods: {
+																			theme: 'islands',
+																			size: 'l',
+																			width: 'available'
+																		},
+																		placeholder: '500'
 																	}
 																]
 															}
@@ -135,11 +148,16 @@ module.exports = {
 															{
 																block: 'text',
 																mods: { view:'ghost', size: 'l' },
-																content: 'Дополнительная подсказка'
+																content: 'Проверьте номер'
 															},
 															{
-																block: 'example-button',
-																mods: { 'size': 'l' }
+																block: 'button',
+																mods: {
+																	theme: 'islands',
+																	size: 'l',
+																	view: 'action'
+																},
+																text: 'Оплатить'
 															}
 														]
 													}
@@ -167,8 +185,8 @@ module.exports = {
 																		elem: 'placeholder',
 																		content: [
 																			{
-																				block: 'placeholder',
-																				mods: { view: 'primary', size: 'm' }
+																				block: 'placeholder2',
+																				mods: { name: 'warning', size: 'l', view: 'brand' }
 																			}
 																		]
 																	},
@@ -178,7 +196,7 @@ module.exports = {
 																			{
 																				block: 'text',
 																				mods: { view: 'primary', size: 'xl', align: 'center' },
-																				content: 'Данный серсис использует cookies для того чтобы сформировать контент наболее подходящий для ваших задач.'
+																				content: 'Данный серсис использует cookies для того чтобы сформировать оптимальный контент'
 																				// content: 'This website uses cookies to offer you the most relevant information. Please accept cookies for optimal performance'
 																			}
 																		]
@@ -248,7 +266,7 @@ module.exports = {
 																			{
 																				block: 'text',
 																				mods: { view:'primary', size: 'l' },
-																				content: '32 000 ₽'
+																				content: '674,00 ₽'
 																			}
 																		]
 																	}
@@ -298,7 +316,7 @@ module.exports = {
 																			{
 																				block: 'text',
 																				mods: { view:'primary', size: 'l' },
-																				content: '32 000 ₽'
+																				content: '1 074,00 ₽'
 																			}
 																		]
 																	}
@@ -348,7 +366,7 @@ module.exports = {
 																			{
 																				block: 'text',
 																				mods: { view:'primary', size: 'l' },
-																				content: '32 000 ₽'
+																				content: '2 104,00 ₽'
 																			}
 																		]
 																	}
@@ -398,7 +416,7 @@ module.exports = {
 																			{
 																				block: 'text',
 																				mods: { view:'primary', size: 'l' },
-																				content: '32 000 ₽'
+																				content: '574,00 ₽'
 																			}
 																		]
 																	}
@@ -448,7 +466,7 @@ module.exports = {
 																			{
 																				block: 'text',
 																				mods: { view:'primary', size: 'l' },
-																				content: '32 000 ₽'
+																				content: '3 574,00 ₽'
 																			}
 																		]
 																	}
@@ -667,7 +685,7 @@ module.exports = {
 																				content: [
 																					{
 																						block: 'brand-logo',
-																						mods: { name: 'yota', size: 'm',  weight: 'bold' }
+																						mods: { name: 'tele2', size: 'm',  weight: 'bold' }
 																					}
 																				]
 																			},
