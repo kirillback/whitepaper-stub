@@ -1,0 +1,10 @@
+.example-button {
+  width: 200px;
+  height: 42px;
+  background: var(--color-bg-action);
+  &_width {
+    &_full {
+      width: 100%;
+    }
+  }
+}

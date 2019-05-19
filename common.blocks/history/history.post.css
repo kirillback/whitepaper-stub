@@ -1,0 +1,6 @@
+.history {
+	min-height: 388px;
+	&__transaction {
+		background: var(--color-bg-default);
+	}
+}
