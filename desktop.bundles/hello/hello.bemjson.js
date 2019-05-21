@@ -28,80 +28,74 @@ module.exports = {
 						elemMods: { size: 'm', align: 'center' },
 						content: [
 							{
-								elem: 'container',
-								elemMods: { size: 'm', align: 'center' },
+								block: 'tpl-grid',
+								mods: { 'xs-ratio': '1', 'm-ratio': '1-1', 'col-gap': 'full', 'row-gap': 'full' },
 								content: [
 									{
-										block: 'tpl-grid',
-										mods: { 'xs-ratio': '1', 'm-ratio': '1-1', 'col-gap': 'full', 'row-gap': 'full' },
+										block: 'rectangle',
+										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+									},
+									{
+										block: 'rectangle',
+										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+									}
+								]
+							},
+							{
+								block: 'tpl-grid',
+								attrs: { style: 'margin-top: 60px;'},
+								mods: { 'xs-ratio': '1', 's-ratio': '1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1', 'col-gap': 'full', 'row-gap': 'full' },
+								content: [
+									{
+										block: 'rectangle',
+										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+									},
+									{
+										block: 'rectangle',
+										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+									},
+									{
+										block: 'rectangle',
+										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+									},
+									{
+										block: 'rectangle',
+										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+									}
+								]
+							},
+							{
+								block: 'tpl-grid',
+								attrs: { style: 'margin-top: 60px; margin-bottom: 60px;'},
+								mods: { 'xs-columns': '3', 's-columns': '6', 'm-columns': '12', 'col-gap': 'full', 'row-gap': 'full' },
+								content: [
+									{
+										elem: 'fraction',
+										elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '7', 'l-col': '7', 's-row': '2' },
 										content: [
 											{
 												block: 'rectangle',
-												attrs: { style: 'background: #555; width: 100%; height: 398px;' }
-											},
-											{
-												block: 'rectangle',
-												attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+												attrs: { style: 'background: #666; width: 100%; height: 600px;' }
 											}
 										]
 									},
 									{
-										block: 'tpl-grid',
-										attrs: { style: 'margin-top: 60px;'},
-										mods: { 'xs-ratio': '1', 's-ratio': '1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1', 'col-gap': 'full', 'row-gap': 'full' },
+										elem: 'fraction',
+										elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '5', 'l-col': '5' },
 										content: [
 											{
 												block: 'rectangle',
-												attrs: { style: 'background: #555; width: 100%; height: 398px;' }
-											},
-											{
-												block: 'rectangle',
-												attrs: { style: 'background: #555; width: 100%; height: 398px;' }
-											},
-											{
-												block: 'rectangle',
-												attrs: { style: 'background: #555; width: 100%; height: 398px;' }
-											},
-											{
-												block: 'rectangle',
-												attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+												attrs: { style: 'background: #555; width: 100%; height: 150px; min-height: 100%;' }
 											}
 										]
 									},
 									{
-										block: 'tpl-grid',
-										attrs: { style: 'margin-top: 60px; margin-bottom: 60px;'},
-										mods: { 'xs-columns': '3', 's-columns': '6', 'm-columns': '12', 'col-gap': 'full', 'row-gap': 'full' },
+										elem: 'fraction',
+										elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '5', 'l-col': '5' },
 										content: [
 											{
-												elem: 'fraction',
-												elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '7', 'l-col': '7', 's-row': '2' },
-												content: [
-													{
-														block: 'rectangle',
-														attrs: { style: 'background: #666; width: 100%; height: 600px;' }
-													}
-												]
-											},
-											{
-												elem: 'fraction',
-												elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '5', 'l-col': '5' },
-												content: [
-													{
-														block: 'rectangle',
-														attrs: { style: 'background: #555; width: 100%; height: 150px; min-height: 100%;' }
-													}
-												]
-											},
-											{
-												elem: 'fraction',
-												elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '5', 'l-col': '5' },
-												content: [
-													{
-														block: 'rectangle',
-														attrs: { style: 'background: #555; width: 100%; height: 150px; min-height: 100%;' }
-													}
-												]
+												block: 'rectangle',
+												attrs: { style: 'background: #555; width: 100%; height: 150px; min-height: 100%;' }
 											}
 										]
 									}
@@ -112,5 +106,7 @@ module.exports = {
 				}
 			]
 		}
+
+
 	]
 };
