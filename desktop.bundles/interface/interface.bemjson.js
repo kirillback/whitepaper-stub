@@ -186,7 +186,7 @@ module.exports = {
 																		content: [
 																			{
 																				block: 'placeholder2',
-																				mods: { name: 'warning', size: 'l', view: 'brand' }
+																				mods: { name: 'warning', size: 'm', view: 'brand' }
 																			}
 																		]
 																	},
