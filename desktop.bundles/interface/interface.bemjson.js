@@ -11,10 +11,13 @@ module.exports = {
 	],
 	scripts: [{ elem: 'js', url: 'interface.min.js' }],
 	mods: { theme: 'islands' },
-	mix: {
-		block: 'theme',
-		mods: { color: 'whitepaper-default', space: 'default', size: 'default', gap: 'small', menu: 'default', breakpoint: 'default', font: 'ibm' }
-	},
+	mix: [
+		{
+			block: 'theme',
+			mods: { color: 'whitepaper-default', space: 'default', size: 'default', gap: 'small', menu: 'default', breakpoint: 'default', font: 'ibm' }
+		},
+		{ block: 'component', mods: { whitepaper: 'default' } }
+	],
 	content: [
 
 		{
@@ -35,36 +38,74 @@ module.exports = {
 									/* User */
 									{
 										block: 'user',
-										mix: { block: 'theme', mods: { color: 'whitepaper-inverse'} },
+										mix: [
+											{ block: 'theme', mods: { color: 'whitepaper-brand'} },
+											{ block: 'component', mods: { whitepaper: 'brand' } },
+											{ block: 'pt-card', mods: { view: 'default' } }
+										],
 										content: [
 											{
-												elem: 'content',
-												mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' } },
+												elem: 'info',
+												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xxl' } },
 												content: [
 													{
-														block: 'avatar',
-														mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 'm' } },
-														content: {
-															elem: 'photo',
-															elemMods: { size: 'l' }
-														}
-													},
-													{
-														elem: 'about',
-														mix: { block: 'pt-icon-plus', elem: 'block' },
+														elem: 'user',
+														mix: [
+															{ block: 'pt-icon-plus', mods: { 'vertical-align': 'center' } },
+															{ block: 'decorator', mods: { 'indent-b': 'xl' } },
+														],
 														content: [
 															{
-																block: 'text',
-																mix: { block: 'decorator', mods: { 'indent-b': 's' } },
-																mods: { view: 'primary', size: 'xl', weight: 'semibold' },
-																content: 'konstantinoplosky'
+																block: 'avatar',
+																mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 'm' } },
+																content: {
+																	elem: 'photo',
+																	elemMods: { size: 'l' }
+																}
 															},
 															{
-																block: 'badge',
-																mods: { view: 'warning' },
-																content: 'идентифицированный'
+																elem: 'about',
+																mix: { block: 'pt-icon-plus', elem: 'block' },
+																content: [
+																	{
+																		block: 'text',
+																		mods: { view: 'primary', size: 'xxl', weight: 'semibold' },
+																		content: 'Матвей Рублёв'
+																	},
+																	{
+																		block: 'text',
+																		mods: { view: 'ghost', size: 'm', weight: 'semibold' },
+																		content: '@rublev'
+																	}
+																]
 															}
 														]
+													},
+													{
+														block: 'text',
+														mods: { view: 'primary', size: 'xxxxl', weight: 'semibold' },
+														content: '22 860 ₽'
+													},
+													{
+														block: 'text',
+														mods: { view: 'secondary', size: 'm', weight: 'semibold' },
+														content: 'Используйте все возможности Яндекс.Денег: ограничений нет. Можно даже скопировать идентификацию в другой кошелек.'
+													}
+												]
+											},
+											{
+												elem: 'wallet',
+												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xxl' } },
+												content: [
+													{
+														block: 'button',
+														mods: {
+															theme: 'islands',
+															size: 'l',
+															view: 'action',
+															width: 'max'
+														},
+														text: 'Пополнить'
 													}
 												]
 											}
@@ -194,7 +235,7 @@ module.exports = {
 							{
 								block: 'tpl-grid',
 								attrs: { style: 'margin-top: 60px;'},
-								mods: { 'xs-ratio': '1', 's-ratio': '1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1', 'col-gap': 'two-thirds', 'row-gap': 'full' },
+								mods: { 'xs-ratio': '1', 's-ratio': '1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1-1', 'col-gap': 'two-thirds', 'row-gap': 'full' },
 								content: [
 
 									/* Product */
@@ -397,6 +438,63 @@ module.exports = {
 																block: 'text',
 																mods: { view:'primary', size: 'l', weight: 'bold' },
 																content: 'Redemption'
+															}
+														]
+													},
+													{
+														elem: 'price',
+														content: [
+															{
+																block: 'text',
+																mods: { view:'primary', size: 's' },
+																content: 'turn-based RPG developed by Airship Syndicate and published by THQ Nordic'
+															}
+														]
+													}
+												]
+											},
+											{
+												elem: 'footer',
+												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+												content: {
+													block: 'tag',
+													mods: { view: 'default', size: 's' },
+													content: 'Role-playing'
+												}
+											}
+										]
+									},
+									/* /Product */
+
+									/* Product */
+									{
+										block: 'product',
+										mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
+										content: [
+											{
+												elem: 'graphic',
+												mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
+												content: {
+													block: 'icon',
+													mods: { name: 'lock', view: 'primary', size: 's' }
+												}
+											},
+											{
+												block: 'image',
+												mix: { block: 'pt-card', elem: 'image' },
+												url: '/assets/ufc.jpg'
+											},	
+											{
+												elem: 'info',
+												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												content: [
+													{
+														elem: 'name',
+														content: [
+															{
+																block: 'text',
+																mods: { view:'primary', size: 'l', weight: 'bold' },
+																content: 'UFC'
 															}
 														]
 													},
@@ -751,7 +849,14 @@ module.exports = {
 										content: [
 											{
 												block: 'rectangle',
-												attrs: { style: 'background: var(--color-bg-brand); width: 100%; height: 150px; min-height: 100%;' }
+												attrs: { style: 'background: black; width: 100%; height: 150px; min-height: 100%;' },
+												content: [
+													{
+														block: 'badge',
+														mods: { view: 'warning' },
+														content: 'идентифицированный'
+													}
+												]
 											}
 										]
 									}
