@@ -28,785 +28,730 @@ module.exports = {
 						elemMods: { size: 'm', align: 'center' },
 						content: [
 							{
-								elem: 'container',
-								elemMods: { size: 'm', align: 'center' },
+								block: 'tpl-grid',
+								mods: { 'xs-ratio': '1', 'm-ratio': '1-1', 'col-gap': 'full', 'row-gap': 'full' },
 								content: [
-									{
-										block: 'tpl-grid',
-										mods: { 'xs-ratio': '1', 'm-ratio': '1-1', 'col-gap': 'full', 'row-gap': 'full' },
-										content: [
 
-											/* Payment */
+									/* User */
+									{
+										block: 'user',
+										mix: { block: 'theme', mods: { color: 'whitepaper-inverse'} },
+										content: [
 											{
-												block: 'payment',
-												mix: [
-													{ block: 'pt-form', mods: { border: 'all' }},
-													{ block: 'component', mods: { whitepaper: 'default' }},
-												],
+												elem: 'content',
+												mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' } },
 												content: [
 													{
-														elem: 'header',
-														mix: { 
-															block: 'pt-form',
-															elem: 'item',
-															elemMods: { 'space-v': 'l', 'space-h': 'xl', border: 'bottom' }
-														},
+														block: 'avatar',
+														mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 'm' } },
+														content: {
+															elem: 'photo',
+															elemMods: { size: 'l' }
+														}
+													},
+													{
+														elem: 'about',
+														mix: { block: 'pt-icon-plus', elem: 'block' },
 														content: [
 															{
 																block: 'text',
-																mods: { view: 'primary', size: 'xxl', weight: 'bold' },
-																content: 'Оплата мобильного'
+																mix: { block: 'decorator', mods: { 'indent-b': 's' } },
+																mods: { view: 'primary', size: 'xl', weight: 'semibold' },
+																content: 'konstantinoplosky'
+															},
+															{
+																block: 'badge',
+																mods: { view: 'warning' },
+																content: 'идентифицированный'
 															}
 														]
-													},
+													}
+												]
+											}
+										]
+									},
+									/* /User */
+
+									/* Payment */
+									{
+										block: 'payment',
+										mix: [
+											{ block: 'pt-form', mods: { border: 'all' }},
+											{ block: 'component', mods: { whitepaper: 'default' }},
+										],
+										content: [
+											{
+												elem: 'header',
+												mix: { 
+													block: 'pt-form',
+													elem: 'item',
+													elemMods: { 'space-v': 'l', 'space-h': 'xl', border: 'bottom' }
+												},
+												content: [
 													{
-														elem: 'content',
-														mix: { 
-															block: 'pt-form',
-															elem: 'item',
-															elemMods: { 'space-v': 'xxxl', 'space-h': 'xl', border: 'bottom' }
-														},
+														block: 'text',
+														mods: { view: 'primary', size: 'xxl', weight: 'bold' },
+														content: 'Оплата мобильного'
+													}
+												]
+											},
+											{
+												elem: 'content',
+												mix: { block: 'pt-form', elem: 'item', elemMods: { 'space-v': 'xxxl', 'space-h': 'xl', border: 'bottom' } },
+												content: [
+													{
+														elem: 'item',
+														mix: { block: 'pt-form', elem: 'item', elemMods: { 'indent-b': 'xl', distribute: 'between', 'vertical-align': 'center' } },
 														content: [
 															{
-																elem: 'item',
-																mix: { 
-																	block: 'pt-form',
-																	elem: 'item',
-																	elemMods: { 'indent-b': 'xl', distribute: 'between', 'vertical-align': 'center' }
-																},
+																elem: 'label',
+																mix: {  block: 'pt-form', elem: 'label', elemMods: { width: 'default' } },
 																content: [
 																	{
-																		elem: 'label',
-																		mix: { 
-																			block: 'pt-form',
-																			elem: 'label',
-																			elemMods: { width: 'default' },
-																		},
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: 'Телефон'
-																			}
-																		]
-																	},
-																	{
-																		block: 'input',
-																		mods: {
-																			theme: 'islands',
-																			size: 'l',
-																			width: 'available'
-																		},
-																		placeholder: '89218008060'
+																		block: 'text',
+																		mods: { view:'primary', size: 'l' },
+																		content: 'Телефон'
 																	}
 																]
 															},
 															{
-																elem: 'item',
-																mix: { 
-																	block: 'pt-form',
-																	elem: 'item',
-																	elemMods: { 'indent-b': 'xl', distribute: 'between', 'vertical-align': 'center' }
-																},
-																content: [
-																	{
-																		elem: 'label',
-																		mix: { 
-																			block: 'pt-form',
-																			elem: 'label',
-																			elemMods: { width: 'default' },
-																		},
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: 'Сумма'
-																			}
-																		]
-																	},
-																	{
-																		block: 'input',
-																		mods: {
-																			theme: 'islands',
-																			size: 'l',
-																			width: 'available'
-																		},
-																		placeholder: '500'
-																	}
-																]
-															}
-														]
-													},
-													{
-														elem: 'footer',
-														mix: { 
-															block: 'pt-form',
-															elem: 'item',
-															elemMods: { distribute: 'between', border: 'bottom', 'vertical-align': 'center', 'space-v': 'l',  'space-h': 'xl' },
-														},
-														content: [
-															{
-																block: 'text',
-																mods: { view:'ghost', size: 'l' },
-																content: 'Проверьте номер'
-															},
-															{
-																block: 'button',
+																block: 'input',
 																mods: {
 																	theme: 'islands',
 																	size: 'l',
-																	view: 'action'
+																	width: 'available'
 																},
-																text: 'Оплатить'
+																placeholder: '89218008060'
+															}
+														]
+													},
+													{
+														elem: 'item',
+														mix: { 
+															block: 'pt-form',
+															elem: 'item',
+															elemMods: { 'indent-b': 'xl', distribute: 'between', 'vertical-align': 'center' }
+														},
+														content: [
+															{
+																elem: 'label',
+																mix: { 
+																	block: 'pt-form',
+																	elem: 'label',
+																	elemMods: { width: 'default' },
+																},
+																content: [
+																	{
+																		block: 'text',
+																		mods: { view:'primary', size: 'l' },
+																		content: 'Сумма'
+																	}
+																]
+															},
+															{
+																block: 'input',
+																mods: {
+																	theme: 'islands',
+																	size: 'l',
+																	width: 'available'
+																},
+																placeholder: '500'
 															}
 														]
 													}
 												]
 											},
-											/* /Payment */
-
-											/* Warning */
 											{
-												block: 'warning',
-												mix: [
-													{ block: 'theme', mods: { color: 'whitepaper-warning' }},
-													{ block: 'pt-informer', mods: { view: 'default', border: 'all' }},
-												],
-												attrs: { 'style': 'background: #FF9400; '},
+												elem: 'footer',
+												mix: { 
+													block: 'pt-form',
+													elem: 'item',
+													elemMods: { distribute: 'between', border: 'bottom', 'vertical-align': 'center', 'space-v': 'l',  'space-h': 'xl' },
+												},
 												content: [
 													{
-														elem: 'content',
-														mix: { block: 'pt-informer', elem: 'content', elemMods: { distribute: 'center', 'space-a': 'xxl' }},
-														content: [
-															{
-																elem: 'col',
-																content: [
-																	{
-																		elem: 'placeholder',
-																		content: [
-																			{
-																				block: 'placeholder2',
-																				mods: { name: 'warning', size: 'm', view: 'brand' }
-																			}
-																		]
-																	},
-																	{
-																		elem: 'description',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view: 'primary', size: 'xl', align: 'center' },
-																				content: 'Данный серсис использует cookies для того чтобы сформировать оптимальный контент'
-																				// content: 'This website uses cookies to offer you the most relevant information. Please accept cookies for optimal performance'
-																			}
-																		]
-																	}
-																]
-															}
-														]
+														block: 'text',
+														mods: { view:'ghost', size: 'l' },
+														content: 'Проверьте номер'
 													},
 													{
-														elem: 'action',
-														mix: { block: 'pt-informer', elem: 'action', elemMods: { 'space-a': 'xl' }},
+														block: 'button',
+														mods: {
+															theme: 'islands',
+															size: 'l',
+															view: 'action'
+														},
+														text: 'Оплатить'
+													}
+												]
+											}
+										]
+									},
+									/* /Payment */
+
+								]
+							},
+							{
+								block: 'tpl-grid',
+								attrs: { style: 'margin-top: 60px;'},
+								mods: { 'xs-ratio': '1', 's-ratio': '1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1', 'col-gap': 'two-thirds', 'row-gap': 'full' },
+								content: [
+
+									/* Product */
+									{
+										block: 'product',
+										mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
+										content: [
+											{
+												elem: 'graphic',
+												mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
+												content: {
+													block: 'icon',
+													mods: { name: 'lock', view: 'primary', size: 's' }
+												}
+											},
+											{
+												block: 'image',
+												mix: { block: 'pt-card', elem: 'image' },
+												url: '/assets/minecraft.jpg'
+											},	
+											{
+												elem: 'info',
+												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												content: [
+													{
+														elem: 'name',
 														content: [
 															{
 																block: 'text',
-																mods: { view: 'primary', size: 'm', align: 'center', weight: 'bold', spacing: 's', transform: 'uppercase' },
-																content: 'Узнать подробности'
+																mods: { view:'primary', size: 'l', weight: 'bold' },
+																content: 'Minecraft'
+															}
+														]
+													},
+													{
+														elem: 'price',
+														content: [
+															{
+																block: 'text',
+																mods: { view:'primary', size: 's' },
+																content: 'turn-based RPG developed by Airship Syndicate and published by THQ Nordic'
+															}
+														]
+													}
+												]
+											},
+											{
+												elem: 'footer',
+												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+												content: {
+													block: 'tag',
+													mods: { view: 'default', size: 's' },
+													content: 'Role-playing'
+												}
+											}
+										]
+									},
+									/* /Product */
+
+									/* Product */
+									{
+										block: 'product',
+										mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
+										content: [
+											{
+												elem: 'graphic',
+												mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
+												content: {
+													block: 'icon',
+													mods: { name: 'lock', view: 'primary', size: 's' }
+												}
+											},
+											{
+												block: 'image',
+												mix: { block: 'pt-card', elem: 'image' },
+												url: '/assets/nightwar.jpg'
+											},	
+											{
+												elem: 'info',
+												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												content: [
+													{
+														elem: 'name',
+														content: [
+															{
+																block: 'text',
+																mods: { view:'primary', size: 'l', weight: 'bold' },
+																content: 'Nightwar'
+															}
+														]
+													},
+													{
+														elem: 'price',
+														content: [
+															{
+																block: 'text',
+																mods: { view:'primary', size: 's' },
+																content: 'turn-based RPG developed by Airship Syndicate and published by THQ Nordic'
+															}
+														]
+													}
+												]
+											},
+											{
+												elem: 'footer',
+												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+												content: {
+													block: 'tag',
+													mods: { view: 'default', size: 's' },
+													content: 'Role-playing'
+												}
+											}
+										]
+									},
+									/* /Product */
+
+									/* Product */
+									{
+										block: 'product',
+										mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
+										content: [
+											{
+												elem: 'graphic',
+												mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
+												content: {
+													block: 'icon',
+													mods: { name: 'lock', view: 'primary', size: 's' }
+												}
+											},
+											{
+												block: 'image',
+												mix: { block: 'pt-card', elem: 'image' },
+												url: '/assets/rayman.jpg'
+											},	
+											{
+												elem: 'info',
+												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												content: [
+													{
+														elem: 'name',
+														content: [
+															{
+																block: 'text',
+																mods: { view:'primary', size: 'l', weight: 'bold' },
+																content: 'Rayman'
+															}
+														]
+													},
+													{
+														elem: 'price',
+														content: [
+															{
+																block: 'text',
+																mods: { view:'primary', size: 's' },
+																content: 'turn-based RPG developed by Airship Syndicate and published by THQ Nordic'
+															}
+														]
+													}
+												]
+											},
+											{
+												elem: 'footer',
+												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+												content: {
+													block: 'tag',
+													mods: { view: 'default', size: 's' },
+													content: 'Role-playing'
+												}
+											}
+										]
+									},
+									/* /Product */
+
+									/* Product */
+									{
+										block: 'product',
+										mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
+										content: [
+											{
+												elem: 'graphic',
+												mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
+												content: {
+													block: 'icon',
+													mods: { name: 'lock', view: 'primary', size: 's' }
+												}
+											},
+											{
+												block: 'image',
+												mix: { block: 'pt-card', elem: 'image' },
+												url: '/assets/redemption.jpg'
+											},	
+											{
+												elem: 'info',
+												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												content: [
+													{
+														elem: 'name',
+														content: [
+															{
+																block: 'text',
+																mods: { view:'primary', size: 'l', weight: 'bold' },
+																content: 'Redemption'
+															}
+														]
+													},
+													{
+														elem: 'price',
+														content: [
+															{
+																block: 'text',
+																mods: { view:'primary', size: 's' },
+																content: 'turn-based RPG developed by Airship Syndicate and published by THQ Nordic'
+															}
+														]
+													}
+												]
+											},
+											{
+												elem: 'footer',
+												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+												content: {
+													block: 'tag',
+													mods: { view: 'default', size: 's' },
+													content: 'Role-playing'
+												}
+											}
+										]
+									}
+									/* /Product */
+
+								]
+							},
+							{
+								block: 'tpl-grid',
+								attrs: { style: 'margin-top: 60px; margin-bottom: 60px;'},
+								mods: { 'xs-columns': '3', 's-columns': '6', 'm-columns': '12', 'col-gap': 'full', 'row-gap': 'full' },
+								content: [
+									{
+										elem: 'fraction',
+										elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '7', 'l-col': '7', 's-row': '2' },
+										content: [
+
+											/* History */
+											{
+												block: 'history',
+												mix: { block: 'pt-list', mods: { view: 'default', border: 'all' }},
+												content: [
+													{
+														elem: 'transaction',
+														mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
+														content: [
+															{
+																elem: 'destination',
+																mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
+																content: [
+																	{
+																		elem: 'pic',
+																		mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
+																		content: [
+																			{
+																				block: 'brand-logo',
+																				mods: { name: 'megafon', size: 'm' }
+																			}
+																		]
+																	},
+																	{
+																		elem: 'label',
+																		mix: { block: 'pt-icon-plus', elem: 'block' },
+																		content: [
+																			{
+																				block: 'text',
+																				mods: { view:'primary', size: 'l' },
+																				content: '+7 921 890 84 64'
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																elem: 'price',
+																mix: { block: 'pt-icon-plus', elem: 'block' },
+																content: [
+																	{
+																		block: 'text',
+																		mods: { view:'primary', size: 'l', weight: 'bold' },
+																		content: '1000 ₽'
+																	}
+																]
+															}
+														]
+													},
+													{
+														elem: 'transaction',
+														mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
+														content: [
+															{
+																elem: 'destination',
+																mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
+																content: [
+																	{
+																		elem: 'pic',
+																		mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
+																		content: [
+																			{
+																				block: 'brand-logo',
+																				mods: { name: 'yota', size: 'm' }
+																			}
+																		]
+																	},
+																	{
+																		elem: 'label',
+																		mix: { block: 'pt-icon-plus', elem: 'block' },
+																		content: [
+																			{
+																				block: 'text',
+																				mods: { view:'primary', size: 'l' },
+																				content: '+7 921 890 84 64'
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																elem: 'price',
+																mix: { block: 'pt-icon-plus', elem: 'block' },
+																content: [
+																	{
+																		block: 'text',
+																		mods: { view:'primary', size: 'l', weight: 'bold'  },
+																		content: '1000 ₽'
+																	}
+																]
+															}
+														]
+													},
+													{
+														elem: 'transaction',
+														mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
+														content: [
+															{
+																elem: 'destination',
+																mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
+																content: [
+																	{
+																		elem: 'pic',
+																		mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
+																		content: [
+																			{
+																				block: 'brand-logo',
+																				mods: { name: 'kcell', size: 'm' }
+																			}
+																		]
+																	},
+																	{
+																		elem: 'label',
+																		mix: { block: 'pt-icon-plus', elem: 'block' },
+																		content: [
+																			{
+																				block: 'text',
+																				mods: { view:'primary', size: 'l' },
+																				content: '+7 921 890 84 64'
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																elem: 'price',
+																mix: { block: 'pt-icon-plus', elem: 'block' },
+																content: [
+																	{
+																		block: 'text',
+																		mods: { view:'primary', size: 'l', weight: 'bold'  },
+																		content: '1000 ₽'
+																	}
+																]
+															}
+														]
+													},
+													{
+														elem: 'transaction',
+														mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
+														content: [
+															{
+																elem: 'destination',
+																mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
+																content: [
+																	{
+																		elem: 'pic',
+																		mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
+																		content: [
+																			{
+																				block: 'brand-logo',
+																				mods: { name: 'mts', size: 'm' }
+																			}
+																		]
+																	},
+																	{
+																		elem: 'label',
+																		mix: { block: 'pt-icon-plus', elem: 'block' },
+																		content: [
+																			{
+																				block: 'text',
+																				mods: { view:'primary', size: 'l' },
+																				content: '+7 921 890 84 64'
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																elem: 'price',
+																mix: { block: 'pt-icon-plus', elem: 'block' },
+																content: [
+																	{
+																		block: 'text',
+																		mods: { view:'primary', size: 'l', weight: 'bold' },
+																		content: '1000 ₽'
+																	}
+																]
+															}
+														]
+													},
+													{
+														elem: 'transaction',
+														mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
+														content: [
+															{
+																elem: 'destination',
+																mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
+																content: [
+																	{
+																		elem: 'pic',
+																		mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
+																		content: [
+																			{
+																				block: 'brand-logo',
+																				mods: { name: 'tele2', size: 'm',  weight: 'bold' }
+																			}
+																		]
+																	},
+																	{
+																		elem: 'label',
+																		mix: { block: 'pt-icon-plus', elem: 'block' },
+																		content: [
+																			{
+																				block: 'text',
+																				mods: { view:'primary', size: 'l' },
+																				content: '+7 921 890 84 64'
+																			}
+																		]
+																	}
+																]
+															},
+															{
+																elem: 'price',
+																mix: { block: 'pt-icon-plus', elem: 'block' },
+																content: [
+																	{
+																		block: 'text',
+																		mods: { view:'primary', size: 'l', weight: 'bold'  },
+																		content: '1000 ₽'
+																	}
+																]
+															}
+														]
+													}
+										
+												]
+											}
+											/* /History */
+
+										]
+									},
+									{
+										elem: 'fraction',
+										elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '5', 'l-col': '5' },
+										content: [
+
+											/* Commerial */
+											{
+												block: 'commercial',
+												mix: [
+													{ block: 'pt-card', mods: { view: 'default' }},
+													{ block: 'theme', mods: { color: 'whitepaper-brand' }}
+												],
+												content: [
+													{
+														elem: 'content',
+														mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' }},
+														content: [
+															{
+																elem: 'preview',
+																content: [
+																	{
+																		block: 'image',
+																	}
+																]
+															},
+															{
+																elem: 'description',
+																content: [
+																	{
+																		block: 'text',
+																		mods: { view: 'primary', size: 'm' },
+																		content: 'С Золотым статусом Xbox Live Gold вы получите доступ к многопользовательскому режиму в играх'
+																	}
+																]
+															}
+														]
+													},
+													{
+														elem: 'nav',
+														mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl', distribute: 'center' }},
+														content: [
+															{
+																elem: 'unit',
+																content: [
+																	{
+																		elem: 'dots',
+																		content: [
+																			{
+																				elem: 'alignwrap',
+																				content: [
+																					{
+																						elem: 'dot',
+																						tag: 'span'
+																					},
+																					{
+																						elem: 'dot',
+																						tag: 'span'
+																					},
+																					{
+																						elem: 'dot',
+																						tag: 'span'
+																					}
+																				]
+																			}
+																		]
+																	}
+																]
 															}
 														]
 													}
 												]
 											}
-											/* /Warning */
+											/* /Commercial */
 
 										]
 									},
 									{
-										block: 'tpl-grid',
-										attrs: { style: 'margin-top: 60px;'},
-										mods: { 'xs-ratio': '1', 's-ratio': '1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1-1', 'col-gap': 'two-thirds', 'row-gap': 'full' },
-										content: [
-
-											/* Product */
-											{
-												block: 'product',
-												mix: { block: 'pt-card', mods: { view: 'default' }},
-												content: [
-													{
-														elem: 'content',
-														mix: { block: 'pt-card', elem: 'content' },
-														content: [
-															{
-																elem: 'image',
-																elemMods: { view: 'minecraft' }
-															}
-														]
-													},
-													{
-														elem: 'footer',
-														mix: { block: 'pt-card', elem: 'footer' },
-														content: [
-															{
-																elem: 'info',
-																content: [
-																	{
-																		elem: 'name',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l', weight: 'bold' },
-																				content: 'Minecraft'
-																			}
-																		]
-																	},
-																	{
-																		elem: 'price',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: '674,00 ₽'
-																			}
-																		]
-																	}
-																]
-															}
-														]
-													}
-												]
-											},
-											/* /Product */
-
-											/* Product */
-											{
-												block: 'product',
-												mix: { block: 'pt-card', mods: { view: 'default' }},
-												content: [
-													{
-														elem: 'content',
-														mix: { block: 'pt-card', elem: 'content' },
-														content: [
-															{
-																elem: 'image',
-																elemMods: { view: 'nightwar' }
-															}
-														]
-													},
-													{
-														elem: 'footer',
-														mix: { block: 'pt-card', elem: 'footer' },
-														content: [
-															{
-																elem: 'info',
-																content: [
-																	{
-																		elem: 'name',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l', weight: 'bold' },
-																				content: 'Nightwar'
-																			}
-																		]
-																	},
-																	{
-																		elem: 'price',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: '1 074,00 ₽'
-																			}
-																		]
-																	}
-																]
-															}
-														]
-													}
-												]
-											},
-											/* /Product */
-
-											/* Product */
-											{
-												block: 'product',
-												mix: { block: 'pt-card', mods: { view: 'default' }},
-												content: [
-													{
-														elem: 'content',
-														mix: { block: 'pt-card', elem: 'content' },
-														content: [
-															{
-																elem: 'image',
-																elemMods: { view: 'rayman' }
-															}
-														]
-													},
-													{
-														elem: 'footer',
-														mix: { block: 'pt-card', elem: 'footer' },
-														content: [
-															{
-																elem: 'info',
-																content: [
-																	{
-																		elem: 'name',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l', weight: 'bold' },
-																				content: 'Rayman'
-																			}
-																		]
-																	},
-																	{
-																		elem: 'price',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: '2 104,00 ₽'
-																			}
-																		]
-																	}
-																]
-															}
-														]
-													}
-												]
-											},
-											/* /Product */
-
-											/* Product */
-											{
-												block: 'product',
-												mix: { block: 'pt-card', mods: { view: 'default' }},
-												content: [
-													{
-														elem: 'content',
-														mix: { block: 'pt-card', elem: 'content' },
-														content: [
-															{
-																elem: 'image',
-																elemMods: { view: 'redemption' }
-															}
-														]
-													},
-													{
-														elem: 'footer',
-														mix: { block: 'pt-card', elem: 'footer' },
-														content: [
-															{
-																elem: 'info',
-																content: [
-																	{
-																		elem: 'name',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l', weight: 'bold' },
-																				content: 'Redemption'
-																			}
-																		]
-																	},
-																	{
-																		elem: 'price',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: '574,00 ₽'
-																			}
-																		]
-																	}
-																]
-															}
-														]
-													}
-												]
-											},
-											/* /Product */
-
-											/* Product */
-											{
-												block: 'product',
-												mix: { block: 'pt-card', mods: { view: 'default' }},
-												content: [
-													{
-														elem: 'content',
-														mix: { block: 'pt-card', elem: 'content' },
-														content: [
-															{
-																elem: 'image',
-																elemMods: { view: 'ufc' }
-															}
-														]
-													},
-													{
-														elem: 'footer',
-														mix: { block: 'pt-card', elem: 'footer' },
-														content: [
-															{
-																elem: 'info',
-																content: [
-																	{
-																		elem: 'name',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l', weight: 'bold' },
-																				content: 'UFC'
-																			}
-																		]
-																	},
-																	{
-																		elem: 'price',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: '3 574,00 ₽'
-																			}
-																		]
-																	}
-																]
-															}
-														]
-													}
-												]
-											}
-											/* /Product */
-
-										]
-									},
-									{
-										block: 'tpl-grid',
-										attrs: { style: 'margin-top: 60px; margin-bottom: 60px;'},
-										mods: { 'xs-columns': '3', 's-columns': '6', 'm-columns': '12', 'col-gap': 'full', 'row-gap': 'full' },
+										elem: 'fraction',
+										elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '5', 'l-col': '5' },
 										content: [
 											{
-												elem: 'fraction',
-												elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '7', 'l-col': '7', 's-row': '2' },
-												content: [
-
-													/* History */
-													{
-														block: 'history',
-														mix: { block: 'pt-list', mods: { view: 'default', border: 'all' }},
-														content: [
-															{
-																elem: 'transaction',
-																mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
-																content: [
-																	{
-																		elem: 'destination',
-																		mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
-																		content: [
-																			{
-																				elem: 'pic',
-																				mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
-																				content: [
-																					{
-																						block: 'brand-logo',
-																						mods: { name: 'megafon', size: 'm' }
-																					}
-																				]
-																			},
-																			{
-																				elem: 'label',
-																				mix: { block: 'pt-icon-plus', elem: 'block' },
-																				content: [
-																					{
-																						block: 'text',
-																						mods: { view:'primary', size: 'l' },
-																						content: '+7 921 890 84 64'
-																					}
-																				]
-																			}
-																		]
-																	},
-																	{
-																		elem: 'price',
-																		mix: { block: 'pt-icon-plus', elem: 'block' },
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l', weight: 'bold' },
-																				content: '1000 ₽'
-																			}
-																		]
-																	}
-																]
-															},
-															{
-																elem: 'transaction',
-																mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
-																content: [
-																	{
-																		elem: 'destination',
-																		mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
-																		content: [
-																			{
-																				elem: 'pic',
-																				mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
-																				content: [
-																					{
-																						block: 'brand-logo',
-																						mods: { name: 'yota', size: 'm' }
-																					}
-																				]
-																			},
-																			{
-																				elem: 'label',
-																				mix: { block: 'pt-icon-plus', elem: 'block' },
-																				content: [
-																					{
-																						block: 'text',
-																						mods: { view:'primary', size: 'l' },
-																						content: '+7 921 890 84 64'
-																					}
-																				]
-																			}
-																		]
-																	},
-																	{
-																		elem: 'price',
-																		mix: { block: 'pt-icon-plus', elem: 'block' },
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l', weight: 'bold'  },
-																				content: '1000 ₽'
-																			}
-																		]
-																	}
-																]
-															},
-															{
-																elem: 'transaction',
-																mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
-																content: [
-																	{
-																		elem: 'destination',
-																		mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
-																		content: [
-																			{
-																				elem: 'pic',
-																				mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
-																				content: [
-																					{
-																						block: 'brand-logo',
-																						mods: { name: 'kcell', size: 'm' }
-																					}
-																				]
-																			},
-																			{
-																				elem: 'label',
-																				mix: { block: 'pt-icon-plus', elem: 'block' },
-																				content: [
-																					{
-																						block: 'text',
-																						mods: { view:'primary', size: 'l' },
-																						content: '+7 921 890 84 64'
-																					}
-																				]
-																			}
-																		]
-																	},
-																	{
-																		elem: 'price',
-																		mix: { block: 'pt-icon-plus', elem: 'block' },
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l', weight: 'bold'  },
-																				content: '1000 ₽'
-																			}
-																		]
-																	}
-																]
-															},
-															{
-																elem: 'transaction',
-																mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
-																content: [
-																	{
-																		elem: 'destination',
-																		mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
-																		content: [
-																			{
-																				elem: 'pic',
-																				mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
-																				content: [
-																					{
-																						block: 'brand-logo',
-																						mods: { name: 'mts', size: 'm' }
-																					}
-																				]
-																			},
-																			{
-																				elem: 'label',
-																				mix: { block: 'pt-icon-plus', elem: 'block' },
-																				content: [
-																					{
-																						block: 'text',
-																						mods: { view:'primary', size: 'l' },
-																						content: '+7 921 890 84 64'
-																					}
-																				]
-																			}
-																		]
-																	},
-																	{
-																		elem: 'price',
-																		mix: { block: 'pt-icon-plus', elem: 'block' },
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l', weight: 'bold' },
-																				content: '1000 ₽'
-																			}
-																		]
-																	}
-																]
-															},
-															{
-																elem: 'transaction',
-																mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
-																content: [
-																	{
-																		elem: 'destination',
-																		mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
-																		content: [
-																			{
-																				elem: 'pic',
-																				mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
-																				content: [
-																					{
-																						block: 'brand-logo',
-																						mods: { name: 'tele2', size: 'm',  weight: 'bold' }
-																					}
-																				]
-																			},
-																			{
-																				elem: 'label',
-																				mix: { block: 'pt-icon-plus', elem: 'block' },
-																				content: [
-																					{
-																						block: 'text',
-																						mods: { view:'primary', size: 'l' },
-																						content: '+7 921 890 84 64'
-																					}
-																				]
-																			}
-																		]
-																	},
-																	{
-																		elem: 'price',
-																		mix: { block: 'pt-icon-plus', elem: 'block' },
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l', weight: 'bold'  },
-																				content: '1000 ₽'
-																			}
-																		]
-																	}
-																]
-															}
-												
-														]
-													}
-													/* /History */
-
-												]
-											},
-											{
-												elem: 'fraction',
-												elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '5', 'l-col': '5' },
-												content: [
-
-													/* Commerial */
-													{
-														block: 'commercial',
-														mix: [
-															{ block: 'pt-card', mods: { view: 'default' }},
-															{ block: 'theme', mods: { color: 'whitepaper-brand' }}
-														],
-														content: [
-															{
-																elem: 'content',
-																mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' }},
-																content: [
-																	{
-																		elem: 'preview',
-																		content: [
-																			{
-																				block: 'image',
-																			}
-																		]
-																	},
-																	{
-																		elem: 'description',
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view: 'primary', size: 'm' },
-																				content: 'С Золотым статусом Xbox Live Gold вы получите доступ к многопользовательскому режиму в играх'
-																			}
-																		]
-																	}
-																]
-															},
-															{
-																elem: 'nav',
-																mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl', distribute: 'center' }},
-																content: [
-																	{
-																		elem: 'unit',
-																		content: [
-																			{
-																				elem: 'dots',
-																				content: [
-																					{
-																						elem: 'alignwrap',
-																						content: [
-																							{
-																								elem: 'dot',
-																								tag: 'span'
-																							},
-																							{
-																								elem: 'dot',
-																								tag: 'span'
-																							},
-																							{
-																								elem: 'dot',
-																								tag: 'span'
-																							}
-																						]
-																					}
-																				]
-																			}
-																		]
-																	}
-																]
-															}
-														]
-													}
-													/* /Commercial */
-
-												]
-											},
-											{
-												elem: 'fraction',
-												elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '5', 'l-col': '5' },
-												content: [
-													{
-														block: 'rectangle',
-														attrs: { style: 'background: var(--color-bg-brand); width: 100%; height: 150px; min-height: 100%;' }
-													}
-												]
+												block: 'rectangle',
+												attrs: { style: 'background: var(--color-bg-brand); width: 100%; height: 150px; min-height: 100%;' }
 											}
 										]
 									}

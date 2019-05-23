@@ -13,7 +13,7 @@ module.exports = {
 	mods: { theme: 'islands' },
 	mix: {
 		block: 'theme',
-		mods: { color: 'whitepaper-default', space: 'default', size: 'default', gap: 'small', menu: 'default', breakpoint: 'default', font: 'ibm' }
+		mods: { color: 'whitepaper-default', space: 'default', size: 'default', gap: 'small', breakpoint: 'default', font: 'ibm' }
 	},
 	content: [
 
@@ -29,7 +29,7 @@ module.exports = {
 						content: [
 							{
 								block: 'tpl-grid',
-								mods: { 'xs-ratio': '1', 'm-ratio': '1-1', 'col-gap': 'full', 'row-gap': 'full' },
+								mods: { 'm-ratio': '1-1', 'col-gap': 'full', 'row-gap': 'full' },
 								content: [
 									{
 										block: 'rectangle',
@@ -44,7 +44,7 @@ module.exports = {
 							{
 								block: 'tpl-grid',
 								attrs: { style: 'margin-top: 60px;'},
-								mods: { 'xs-ratio': '1', 's-ratio': '1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1', 'col-gap': 'full', 'row-gap': 'full' },
+								mods: { 's-ratio': '1-1', 'm-ratio': '1-1-1', 'l-ratio': '1-1-1-1', 'col-gap': 'full', 'row-gap': 'full' },
 								content: [
 									{
 										block: 'rectangle',
