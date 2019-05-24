@@ -40,8 +40,8 @@ module.exports = {
 										block: 'user',
 										mix: [
 											// { block: 'theme', mods: { color: 'whitepaper-brand'} },
-											{ block: 'component', mods: { whitepaper: 'brand' } },
 											// { block: 'pt-card', mods: { view: 'default' } }
+											{ block: 'component', mods: { whitepaper: 'brand' } },
 										],
 										content: [
 											{
@@ -85,11 +85,6 @@ module.exports = {
 														block: 'text',
 														mods: { view: 'primary', size: 'xxxxl', weight: 'semibold' },
 														content: '22 860 ₽'
-													},
-													{
-														block: 'text',
-														mods: { view: 'secondary', size: 'm', weight: 'semibold' },
-														content: 'Используйте все возможности Яндекс.Денег: ограничений нет. Можно даже скопировать идентификацию в другой кошелек.'
 													}
 												]
 											},
@@ -211,7 +206,7 @@ module.exports = {
 												]
 											}
 										]
-									},
+									}
 									/* /Payment */
 
 								]
@@ -299,7 +294,7 @@ module.exports = {
 											},	
 											{
 												elem: 'info',
-												// mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												// mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's' } },
 												content: [
 													{
 														elem: 'name',
@@ -339,11 +334,11 @@ module.exports = {
 									/* Product */
 									{
 										block: 'product',
-										mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
+										// mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
 										content: [
 											{
 												elem: 'graphic',
-												mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
+												// mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
 												content: {
 													block: 'icon',
 													mods: { name: 'lock', view: 'primary', size: 's' }
@@ -351,12 +346,12 @@ module.exports = {
 											},
 											{
 												block: 'image',
-												mix: { block: 'pt-card', elem: 'image' },
+												// mix: { block: 'pt-card', elem: 'image' },
 												url: '/assets/rayman.jpg'
 											},	
 											{
 												elem: 'info',
-												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												// mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's' } },
 												content: [
 													{
 														elem: 'name',
@@ -382,7 +377,7 @@ module.exports = {
 											},
 											{
 												elem: 'footer',
-												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+												// mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
 												content: {
 													block: 'tag',
 													mods: { view: 'default', size: 's' },
@@ -396,11 +391,11 @@ module.exports = {
 									/* Product */
 									{
 										block: 'product',
-										mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
+										// mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
 										content: [
 											{
 												elem: 'graphic',
-												mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
+												// mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
 												content: {
 													block: 'icon',
 													mods: { name: 'lock', view: 'primary', size: 's' }
@@ -408,12 +403,12 @@ module.exports = {
 											},
 											{
 												block: 'image',
-												mix: { block: 'pt-card', elem: 'image' },
+												// mix: { block: 'pt-card', elem: 'image' },
 												url: '/assets/redemption.jpg'
 											},	
 											{
 												elem: 'info',
-												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												// mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's' } },
 												content: [
 													{
 														elem: 'name',
@@ -439,7 +434,7 @@ module.exports = {
 											},
 											{
 												elem: 'footer',
-												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+												// mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
 												content: {
 													block: 'tag',
 													mods: { view: 'default', size: 's' },
@@ -453,11 +448,11 @@ module.exports = {
 									/* Product */
 									{
 										block: 'product',
-										mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
+										// mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
 										content: [
 											{
 												elem: 'graphic',
-												mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
+												// mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
 												content: {
 													block: 'icon',
 													mods: { name: 'lock', view: 'primary', size: 's' }
@@ -465,12 +460,12 @@ module.exports = {
 											},
 											{
 												block: 'image',
-												mix: { block: 'pt-card', elem: 'image' },
+												// mix: { block: 'pt-card', elem: 'image' },
 												url: '/assets/ufc.jpg'
 											},	
 											{
 												elem: 'info',
-												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												// mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's' } },
 												content: [
 													{
 														elem: 'name',
@@ -496,7 +491,7 @@ module.exports = {
 											},
 											{
 												elem: 'footer',
-												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+												// mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
 												content: {
 													block: 'tag',
 													mods: { view: 'default', size: 's' },
@@ -562,189 +557,13 @@ module.exports = {
 																	{
 																		block: 'text',
 																		mods: { view:'primary', size: 'l', weight: 'bold' },
-																		content: '1000 ₽'
+																		content: '970 ₽'
 																	}
 																]
 															}
 														]
 													},
-													{
-														elem: 'transaction',
-														// mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
-														content: [
-															{
-																elem: 'destination',
-																// mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
-																content: [
-																	{
-																		elem: 'pic',
-																		// mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
-																		content: [
-																			{
-																				block: 'brand-logo',
-																				mods: { name: 'yota', size: 'm' }
-																			}
-																		]
-																	},
-																	{
-																		elem: 'label',
-																		// mix: { block: 'pt-icon-plus', elem: 'block' },
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: '+7 921 890 84 64'
-																			}
-																		]
-																	}
-																]
-															},
-															{
-																elem: 'price',
-																// mix: { block: 'pt-icon-plus', elem: 'block' },
-																content: [
-																	{
-																		block: 'text',
-																		mods: { view:'primary', size: 'l', weight: 'bold'  },
-																		content: '1000 ₽'
-																	}
-																]
-															}
-														]
-													},
-													{
-														elem: 'transaction',
-														// mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
-														content: [
-															{
-																elem: 'destination',
-																// mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
-																content: [
-																	{
-																		elem: 'pic',
-																		// mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
-																		content: [
-																			{
-																				block: 'brand-logo',
-																				mods: { name: 'kcell', size: 'm' }
-																			}
-																		]
-																	},
-																	{
-																		elem: 'label',
-																		// mix: { block: 'pt-icon-plus', elem: 'block' },
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: '+7 921 890 84 64'
-																			}
-																		]
-																	}
-																]
-															},
-															{
-																elem: 'price',
-																// mix: { block: 'pt-icon-plus', elem: 'block' },
-																content: [
-																	{
-																		block: 'text',
-																		mods: { view:'primary', size: 'l', weight: 'bold'  },
-																		content: '1000 ₽'
-																	}
-																]
-															}
-														]
-													},
-													{
-														elem: 'transaction',
-														// mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
-														content: [
-															{
-																elem: 'destination',
-																// mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
-																content: [
-																	{
-																		elem: 'pic',
-																		// mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
-																		content: [
-																			{
-																				block: 'brand-logo',
-																				mods: { name: 'mts', size: 'm' }
-																			}
-																		]
-																	},
-																	{
-																		elem: 'label',
-																		// mix: { block: 'pt-icon-plus', elem: 'block' },
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: '+7 921 890 84 64'
-																			}
-																		]
-																	}
-																]
-															},
-															{
-																elem: 'price',
-																// mix: { block: 'pt-icon-plus', elem: 'block' },
-																content: [
-																	{
-																		block: 'text',
-																		mods: { view:'primary', size: 'l', weight: 'bold' },
-																		content: '1000 ₽'
-																	}
-																]
-															}
-														]
-													},
-													{
-														elem: 'transaction',
-														// mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
-														content: [
-															{
-																elem: 'destination',
-																// mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
-																content: [
-																	{
-																		elem: 'pic',
-																		// mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
-																		content: [
-																			{
-																				block: 'brand-logo',
-																				mods: { name: 'tele2', size: 'm',  weight: 'bold' }
-																			}
-																		]
-																	},
-																	{
-																		elem: 'label',
-																		// mix: { block: 'pt-icon-plus', elem: 'block' },
-																		content: [
-																			{
-																				block: 'text',
-																				mods: { view:'primary', size: 'l' },
-																				content: '+7 921 890 84 64'
-																			}
-																		]
-																	}
-																]
-															},
-															{
-																elem: 'price',
-																// mix: { block: 'pt-icon-plus', elem: 'block' },
-																content: [
-																	{
-																		block: 'text',
-																		mods: { view:'primary', size: 'l', weight: 'bold'  },
-																		content: '1000 ₽'
-																	}
-																]
-															}
-														]
-													}
-										
+
 												]
 											}
 											/* /History */
@@ -759,69 +578,7 @@ module.exports = {
 											/* Commerial */
 											{
 												block: 'commercial',
-												mix: [
-													// { block: 'pt-card', mods: { view: 'default' }},
-													{ block: 'theme', mods: { color: 'whitepaper-brand' }}
-												],
-												content: [
-													{
-														elem: 'content',
-														// mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' }},
-														content: [
-															{
-																elem: 'preview',
-																content: [
-																	{
-																		block: 'image',
-																	}
-																]
-															},
-															{
-																elem: 'description',
-																content: [
-																	{
-																		block: 'text',
-																		mods: { view: 'primary', size: 'm' },
-																		content: 'С Золотым статусом Xbox Live Gold вы получите доступ к многопользовательскому режиму в играх'
-																	}
-																]
-															}
-														]
-													},
-													{
-														elem: 'nav',
-														// mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl', distribute: 'center' }},
-														content: [
-															{
-																elem: 'unit',
-																content: [
-																	{
-																		elem: 'dots',
-																		content: [
-																			{
-																				elem: 'alignwrap',
-																				content: [
-																					{
-																						elem: 'dot',
-																						tag: 'span'
-																					},
-																					{
-																						elem: 'dot',
-																						tag: 'span'
-																					},
-																					{
-																						elem: 'dot',
-																						tag: 'span'
-																					}
-																				]
-																			}
-																		]
-																	}
-																]
-															}
-														]
-													}
-												]
+												mix: { block: 'theme', mods: { color: 'xbox-brand' }}
 											}
 											/* /Commercial */
 
@@ -829,19 +586,46 @@ module.exports = {
 									},
 									{
 										elem: 'fraction',
-										elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '5', 'l-col': '5' },
+										elemMods: { 'xs-col': '3', 's-col': '6', 'm-col': '5', 'l-col': '5', 's-row': '1'  },
 										content: [
+
+											/* Invoice */
 											{
-												block: 'rectangle',
-												attrs: { style: 'background: black; width: 100%; height: 150px; min-height: 100%;' },
+												block: 'invoice',
+												// mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center', distribute: 'between' } },
 												content: [
 													{
-														block: 'badge',
-														mods: { view: 'warning' },
-														content: 'идентифицированный'
+														elem: 'info',
+														// mix: { block: 'pt-icon-plus', elem: 'icon' },
+														content: [
+															{
+																block: 'text',
+																mods: { view:'primary', size: 's', transform: 'uppercase', weight: 'bold', spacing: 's' },
+																// mix: { block: 'decorator', mods: { 'indent-b': 'xxs' } },
+																content: 'Регулярный платёж'
+															},
+															{
+																block: 'text',
+																mods: { view:'secondary', size: 'm' },
+																content: '«Мой мобильный» оптачен 23 мая 2019'
+															}
+														]
+													},
+													{
+														elem: 'status',
+														// mix: { block: 'pt-icon-plus', elem: 'block' },
+														content: [
+															{
+																block: 'badge',
+																mods: { view: 'success' },
+																content: 'оплачен'
+															}
+														]
 													}
 												]
 											}
+											/* /Invoice */
+
 										]
 									}
 								]
