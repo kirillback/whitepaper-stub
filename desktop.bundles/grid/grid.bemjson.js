@@ -33,11 +33,11 @@ module.exports = {
 								content: [
 									{
 										block: 'rectangle',
-										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+										attrs: { style: 'background: #7097FA; width: 100%; height: 398px;' }
 									},
 									{
 										block: 'rectangle',
-										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+										attrs: { style: 'background: #1051F6; width: 100%; height: 398px;' }
 									}
 								]
 							},
@@ -48,19 +48,19 @@ module.exports = {
 								content: [
 									{
 										block: 'rectangle',
-										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+										attrs: { style: 'background: #C3FDE1; width: 100%; height: 398px;' }
 									},
 									{
 										block: 'rectangle',
-										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+										attrs: { style: 'background: #87FBC3; width: 100%; height: 398px;' }
 									},
 									{
 										block: 'rectangle',
-										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+										attrs: { style: 'background: #4CF8A5; width: 100%; height: 398px;' }
 									},
 									{
 										block: 'rectangle',
-										attrs: { style: 'background: #555; width: 100%; height: 398px;' }
+										attrs: { style: 'background: #10F688; width: 100%; height: 398px;' }
 									}
 								]
 							},
@@ -75,7 +75,7 @@ module.exports = {
 										content: [
 											{
 												block: 'rectangle',
-												attrs: { style: 'background: #666; width: 100%; height: 600px;' }
+												attrs: { style: 'background: #FFB3BF; width: 100%; height: 600px;' }
 											}
 										]
 									},
@@ -85,7 +85,7 @@ module.exports = {
 										content: [
 											{
 												block: 'rectangle',
-												attrs: { style: 'background: #555; width: 100%; height: 150px; min-height: 100%;' }
+												attrs: { style: 'background: #FF8095; width: 100%; height: 150px; min-height: 100%;' }
 											}
 										]
 									},
@@ -95,7 +95,7 @@ module.exports = {
 										content: [
 											{
 												block: 'rectangle',
-												attrs: { style: 'background: #555; width: 100%; height: 150px; min-height: 100%;' }
+												attrs: { style: 'background: #FF4060; width: 100%; height: 150px; min-height: 100%;' }
 											}
 										]
 									}
@@ -106,6 +106,7 @@ module.exports = {
 				}
 			]
 		}
+
 
 	]
 };
