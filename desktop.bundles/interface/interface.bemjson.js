@@ -39,25 +39,25 @@ module.exports = {
 									{
 										block: 'user',
 										mix: [
-											{ block: 'theme', mods: { color: 'whitepaper-brand'} },
+											// { block: 'theme', mods: { color: 'whitepaper-brand'} },
 											{ block: 'component', mods: { whitepaper: 'brand' } },
-											{ block: 'pt-card', mods: { view: 'default' } }
+											// { block: 'pt-card', mods: { view: 'default' } }
 										],
 										content: [
 											{
 												elem: 'info',
-												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xxl' } },
+												// mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xxl' } },
 												content: [
 													{
 														elem: 'user',
 														mix: [
-															{ block: 'pt-icon-plus', mods: { 'vertical-align': 'center' } },
+															// { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' } },
 															{ block: 'decorator', mods: { 'indent-b': 'xl' } },
 														],
 														content: [
 															{
 																block: 'avatar',
-																mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 'm' } },
+																// mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 'm' } },
 																content: {
 																	elem: 'photo',
 																	elemMods: { size: 'l' }
@@ -65,7 +65,7 @@ module.exports = {
 															},
 															{
 																elem: 'about',
-																mix: { block: 'pt-icon-plus', elem: 'block' },
+																// mix: { block: 'pt-icon-plus', elem: 'block' },
 																content: [
 																	{
 																		block: 'text',
@@ -95,7 +95,7 @@ module.exports = {
 											},
 											{
 												elem: 'wallet',
-												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xxl' } },
+												// mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xxl' } },
 												content: [
 													{
 														block: 'button',
@@ -117,17 +117,13 @@ module.exports = {
 									{
 										block: 'payment',
 										mix: [
-											{ block: 'pt-form', mods: { border: 'all' }},
+											// { block: 'pt-form', mods: { border: 'all' }},
 											{ block: 'component', mods: { whitepaper: 'default' }},
 										],
 										content: [
 											{
 												elem: 'header',
-												mix: { 
-													block: 'pt-form',
-													elem: 'item',
-													elemMods: { 'space-v': 'l', 'space-h': 'xl', border: 'bottom' }
-												},
+												// mix: { block: 'pt-form', elem: 'item', elemMods: { 'space-v': 'l', 'space-h': 'xl', border: 'bottom' } },
 												content: [
 													{
 														block: 'text',
@@ -138,15 +134,15 @@ module.exports = {
 											},
 											{
 												elem: 'content',
-												mix: { block: 'pt-form', elem: 'item', elemMods: { 'space-v': 'xxxl', 'space-h': 'xl', border: 'bottom' } },
+												// mix: { block: 'pt-form', elem: 'item', elemMods: { 'space-v': 'xxxl', 'space-h': 'xl', border: 'bottom' } },
 												content: [
 													{
 														elem: 'item',
-														mix: { block: 'pt-form', elem: 'item', elemMods: { 'indent-b': 'xl', distribute: 'between', 'vertical-align': 'center' } },
+														// mix: { block: 'pt-form', elem: 'item', elemMods: { 'indent-b': 'xl', distribute: 'between', 'vertical-align': 'center' } },
 														content: [
 															{
 																elem: 'label',
-																mix: {  block: 'pt-form', elem: 'label', elemMods: { width: 'default' } },
+																// mix: {  block: 'pt-form', elem: 'label', elemMods: { width: 'default' } },
 																content: [
 																	{
 																		block: 'text',
@@ -168,19 +164,11 @@ module.exports = {
 													},
 													{
 														elem: 'item',
-														mix: { 
-															block: 'pt-form',
-															elem: 'item',
-															elemMods: { 'indent-b': 'xl', distribute: 'between', 'vertical-align': 'center' }
-														},
+														// mix: {  block: 'pt-form', elem: 'item', elemMods: { 'indent-b': 'xl', distribute: 'between', 'vertical-align': 'center' } },
 														content: [
 															{
 																elem: 'label',
-																mix: { 
-																	block: 'pt-form',
-																	elem: 'label',
-																	elemMods: { width: 'default' },
-																},
+																// mix: { block: 'pt-form', elem: 'label', elemMods: { width: 'default' }, },
 																content: [
 																	{
 																		block: 'text',
@@ -204,11 +192,7 @@ module.exports = {
 											},
 											{
 												elem: 'footer',
-												mix: { 
-													block: 'pt-form',
-													elem: 'item',
-													elemMods: { distribute: 'between', border: 'bottom', 'vertical-align': 'center', 'space-v': 'l',  'space-h': 'xl' },
-												},
+												// mix: { block: 'pt-form', elem: 'item', elemMods: { distribute: 'between', border: 'bottom', 'vertical-align': 'center', 'space-v': 'l',  'space-h': 'xl' }, },
 												content: [
 													{
 														block: 'text',
@@ -241,11 +225,11 @@ module.exports = {
 									/* Product */
 									{
 										block: 'product',
-										mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
+										// mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
 										content: [
 											{
 												elem: 'graphic',
-												mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
+												// mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
 												content: {
 													block: 'icon',
 													mods: { name: 'lock', view: 'primary', size: 's' }
@@ -253,12 +237,12 @@ module.exports = {
 											},
 											{
 												block: 'image',
-												mix: { block: 'pt-card', elem: 'image' },
+												// mix: { block: 'pt-card', elem: 'image' },
 												url: '/assets/minecraft.jpg'
 											},	
 											{
 												elem: 'info',
-												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												// mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
 												content: [
 													{
 														elem: 'name',
@@ -284,7 +268,7 @@ module.exports = {
 											},
 											{
 												elem: 'footer',
-												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+												// mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
 												content: {
 													block: 'tag',
 													mods: { view: 'default', size: 's' },
@@ -298,11 +282,11 @@ module.exports = {
 									/* Product */
 									{
 										block: 'product',
-										mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
+										// mix: { block: 'pt-card', mods: { view: 'default', border: 'all' } },
 										content: [
 											{
 												elem: 'graphic',
-												mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
+												// mix: { block: 'pt-card', elem: 'header', elemMods: { distribute: 'right', 'space-a': 's' } },
 												content: {
 													block: 'icon',
 													mods: { name: 'lock', view: 'primary', size: 's' }
@@ -310,12 +294,12 @@ module.exports = {
 											},
 											{
 												block: 'image',
-												mix: { block: 'pt-card', elem: 'image' },
+												// mix: { block: 'pt-card', elem: 'image' },
 												url: '/assets/nightwar.jpg'
 											},	
 											{
 												elem: 'info',
-												mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
+												// mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-h': 's', 'space-t': 's', } },
 												content: [
 													{
 														elem: 'name',
@@ -341,7 +325,7 @@ module.exports = {
 											},
 											{
 												elem: 'footer',
-												mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
+												// mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 's' } },
 												content: {
 													block: 'tag',
 													mods: { view: 'default', size: 's' },
@@ -538,19 +522,19 @@ module.exports = {
 											/* History */
 											{
 												block: 'history',
-												mix: { block: 'pt-list', mods: { view: 'default', border: 'all' }},
+												// mix: { block: 'pt-list', mods: { view: 'default', border: 'all' }},
 												content: [
 													{
 														elem: 'transaction',
-														mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
+														// mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
 														content: [
 															{
 																elem: 'destination',
-																mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
+																// mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
 																content: [
 																	{
 																		elem: 'pic',
-																		mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
+																		// mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
 																		content: [
 																			{
 																				block: 'brand-logo',
@@ -560,7 +544,7 @@ module.exports = {
 																	},
 																	{
 																		elem: 'label',
-																		mix: { block: 'pt-icon-plus', elem: 'block' },
+																		// mix: { block: 'pt-icon-plus', elem: 'block' },
 																		content: [
 																			{
 																				block: 'text',
@@ -573,7 +557,7 @@ module.exports = {
 															},
 															{
 																elem: 'price',
-																mix: { block: 'pt-icon-plus', elem: 'block' },
+																// mix: { block: 'pt-icon-plus', elem: 'block' },
 																content: [
 																	{
 																		block: 'text',
@@ -586,15 +570,15 @@ module.exports = {
 													},
 													{
 														elem: 'transaction',
-														mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
+														// mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
 														content: [
 															{
 																elem: 'destination',
-																mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
+																// mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
 																content: [
 																	{
 																		elem: 'pic',
-																		mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
+																		// mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
 																		content: [
 																			{
 																				block: 'brand-logo',
@@ -604,7 +588,7 @@ module.exports = {
 																	},
 																	{
 																		elem: 'label',
-																		mix: { block: 'pt-icon-plus', elem: 'block' },
+																		// mix: { block: 'pt-icon-plus', elem: 'block' },
 																		content: [
 																			{
 																				block: 'text',
@@ -617,7 +601,7 @@ module.exports = {
 															},
 															{
 																elem: 'price',
-																mix: { block: 'pt-icon-plus', elem: 'block' },
+																// mix: { block: 'pt-icon-plus', elem: 'block' },
 																content: [
 																	{
 																		block: 'text',
@@ -630,15 +614,15 @@ module.exports = {
 													},
 													{
 														elem: 'transaction',
-														mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
+														// mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
 														content: [
 															{
 																elem: 'destination',
-																mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
+																// mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
 																content: [
 																	{
 																		elem: 'pic',
-																		mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
+																		// mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
 																		content: [
 																			{
 																				block: 'brand-logo',
@@ -648,7 +632,7 @@ module.exports = {
 																	},
 																	{
 																		elem: 'label',
-																		mix: { block: 'pt-icon-plus', elem: 'block' },
+																		// mix: { block: 'pt-icon-plus', elem: 'block' },
 																		content: [
 																			{
 																				block: 'text',
@@ -661,7 +645,7 @@ module.exports = {
 															},
 															{
 																elem: 'price',
-																mix: { block: 'pt-icon-plus', elem: 'block' },
+																// mix: { block: 'pt-icon-plus', elem: 'block' },
 																content: [
 																	{
 																		block: 'text',
@@ -674,15 +658,15 @@ module.exports = {
 													},
 													{
 														elem: 'transaction',
-														mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
+														// mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
 														content: [
 															{
 																elem: 'destination',
-																mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
+																// mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
 																content: [
 																	{
 																		elem: 'pic',
-																		mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
+																		// mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
 																		content: [
 																			{
 																				block: 'brand-logo',
@@ -692,7 +676,7 @@ module.exports = {
 																	},
 																	{
 																		elem: 'label',
-																		mix: { block: 'pt-icon-plus', elem: 'block' },
+																		// mix: { block: 'pt-icon-plus', elem: 'block' },
 																		content: [
 																			{
 																				block: 'text',
@@ -705,7 +689,7 @@ module.exports = {
 															},
 															{
 																elem: 'price',
-																mix: { block: 'pt-icon-plus', elem: 'block' },
+																// mix: { block: 'pt-icon-plus', elem: 'block' },
 																content: [
 																	{
 																		block: 'text',
@@ -718,15 +702,15 @@ module.exports = {
 													},
 													{
 														elem: 'transaction',
-														mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
+														// mix: { block: 'pt-list', elem: 'item', elemMods: { border: 'bottom', 'space-v': 'm', 'space-h': 'l', 'vertical-align': 'center', distribute: 'between' }},
 														content: [
 															{
 																elem: 'destination',
-																mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
+																// mix: { block: 'pt-icon-plus', mods: { 'vertical-align': 'center' }},
 																content: [
 																	{
 																		elem: 'pic',
-																		mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
+																		// mix: { block: 'pt-icon-plus', elem: 'icon', elemMods: { 'indent-r': 's' }},
 																		content: [
 																			{
 																				block: 'brand-logo',
@@ -736,7 +720,7 @@ module.exports = {
 																	},
 																	{
 																		elem: 'label',
-																		mix: { block: 'pt-icon-plus', elem: 'block' },
+																		// mix: { block: 'pt-icon-plus', elem: 'block' },
 																		content: [
 																			{
 																				block: 'text',
@@ -749,7 +733,7 @@ module.exports = {
 															},
 															{
 																elem: 'price',
-																mix: { block: 'pt-icon-plus', elem: 'block' },
+																// mix: { block: 'pt-icon-plus', elem: 'block' },
 																content: [
 																	{
 																		block: 'text',
@@ -776,13 +760,13 @@ module.exports = {
 											{
 												block: 'commercial',
 												mix: [
-													{ block: 'pt-card', mods: { view: 'default' }},
+													// { block: 'pt-card', mods: { view: 'default' }},
 													{ block: 'theme', mods: { color: 'whitepaper-brand' }}
 												],
 												content: [
 													{
 														elem: 'content',
-														mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' }},
+														// mix: { block: 'pt-card', elem: 'content', elemMods: { 'space-a': 'xl' }},
 														content: [
 															{
 																elem: 'preview',
@@ -806,7 +790,7 @@ module.exports = {
 													},
 													{
 														elem: 'nav',
-														mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl', distribute: 'center' }},
+														// mix: { block: 'pt-card', elem: 'footer', elemMods: { 'space-a': 'xl', distribute: 'center' }},
 														content: [
 															{
 																elem: 'unit',
